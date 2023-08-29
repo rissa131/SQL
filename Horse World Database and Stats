@@ -1,0 +1,32 @@
+---Create a horse store database
+
+CREATE TABLE HorseWorld (id integer PRIMARY KEY, name TEXT, price NUMERIC, amount INTEGER, color TEXT, rating INTEGER);
+
+INSERT INTO HorseWorld VALUES (1, 'Halter', 16, 25, 'Blue', 9);
+INSERT INTO HorseWorld VALUES (2, 'Bridle', 25, 30, 'Brown', 10);
+INSERT INTO HorseWorld VALUES (3, 'HoofPic', 5, 30, 'Silver', 8);
+INSERT INTO HorseWorld VALUES (4, 'HoofPaint', 2, 25, 'Black', 6);
+INSERT INTO HorseWorld VALUES (5, 'Saddle', 2000, 5, 'Cognac', 10);
+INSERT INTO HorseWorld VALUES (6, 'SaddlePad', 45, 15, 'White', 8);
+INSERT INTO HorseWorld VALUES (7, 'Girth', 30, 10, 'Cream', 10);
+INSERT INTO HorseWorld VALUES (8, 'Martingale', 35, 10, 'Rust', 9);
+INSERT INTO HorseWorld VALUES (9, 'Boots', 150, 12, 'DarkBrown', 9);
+INSERT INTO HorseWorld VALUES (10, 'Shirt', 165, 20, 'Blue', 7);
+INSERT INTO HorseWorld VALUES (11, 'Helmet', 350, 10, 'Black', 9);
+INSERT INTO HorseWorld VALUES (12, 'Gloves', 75, 15, 'Black', 10);
+INSERT INTO HorseWorld VALUES (13, 'Chaps', 65, 12, 'Burgundy', 10);
+INSERT INTO HorseWorld VALUES (14, 'Treats', 15, 25, 'Rainbow', 8);
+INSERT INTO HorseWorld VALUES (15, 'Brush', 12, 20, 'Tan', 7);
+
+---Display the database order by price
+SELECT * FROM HorseWorld ORDER BY price ASC;
+
+---What products are priced $50 or more?
+SELECT * FROM HorseWorld WHERE price >= 50;
+
+---What are the top rated items?
+SELECT name, price, rating
+FROM HorseWorld
+order by rating desc
+limit 5; 
+
